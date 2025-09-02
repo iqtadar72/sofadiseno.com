@@ -1131,6 +1131,90 @@
         </section>
         <!-- /.top--pick -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- whatsapp testing  -->
+
+
+
+
+
+ <!-- WhatsApp Button (with welcome message) -->
+    <a href="https://wa.me/911234567890?text=Hello,+I+visited+your+website+and+want+to+know+more+about+your+products" 
+       target="_blank" id="whatsapp-btn"
+       style="width: 50px; height: 50px; margin-bottom: 10px; background-color: #25D366; color: white; border-radius: 50%; 
+              display: none; align-items: center; justify-content: center; text-decoration: none; 
+              font-size: 22px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Call Button -->
+    <a href="tel:+911234567890" id="call-btn"
+       style="width: 50px; height: 50px; margin-bottom: 10px; background-color: #34b7f1; color: white; border-radius: 50%; 
+              display: none; align-items: center; justify-content: center; text-decoration: none; 
+              font-size: 22px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+      <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- Main Floating Button -->
+    <button onclick="toggleFAB()" 
+            style="width: 60px; height: 60px; background-color: #ff4757; color: white; border-radius: 50%; border: none; 
+                   display: flex; align-items: center; justify-content: center; font-size: 26px; 
+                   cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+      <i class="fas fa-plus"></i>
+    </button>
+
+  </div>
+
+  <script>
+    function toggleFAB() {
+      let whatsapp = document.getElementById("whatsapp-btn");
+      let call = document.getElementById("call-btn");
+      // Toggle display
+      if (whatsapp.style.display === "none") {
+        whatsapp.style.display = "flex";
+        call.style.display = "flex";
+      } else {
+        whatsapp.style.display = "none";
+        call.style.display = "none";
+      }
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- .lookbook -->
         <section class="section-lookbook">
             <div class="left-img">
