@@ -1150,13 +1150,14 @@
 
 <!-- whatsapp testing  -->
 
-<!-- Floating Button Wrapper (sticky bottom-right) -->
+  <!-- Floating Button Wrapper -->
   <div id="fab-wrapper" 
-       style="position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; align-items: flex-end; z-index: 9999;">
+       style="position: fixed; bottom: 20px; right: 80px; display: flex; flex-direction: column; align-items: flex-end; z-index: 9999;">
     
     <!-- WhatsApp Button (with welcome message) -->
     <a href="https://wa.me/911234567890?text=Hello,+I+visited+your+website+and+want+to+know+more+about+your+products" 
        target="_blank" id="whatsapp-btn"
+       title="Chat on WhatsApp"
        style="width: 50px; height: 50px; margin-bottom: 10px; background-color: #25D366; color: white; border-radius: 50%; 
               display: none; align-items: center; justify-content: center; text-decoration: none; 
               font-size: 22px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
@@ -1165,6 +1166,7 @@
 
     <!-- Call Button -->
     <a href="tel:+911234567890" id="call-btn"
+       title="Call Us"
        style="width: 50px; height: 50px; margin-bottom: 10px; background-color: #34b7f1; color: white; border-radius: 50%; 
               display: none; align-items: center; justify-content: center; text-decoration: none; 
               font-size: 22px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
@@ -1172,11 +1174,12 @@
     </a>
 
     <!-- Main Floating Button -->
-    <button onclick="toggleFAB()" 
+    <button onclick="toggleFAB()" id="main-btn"
+            title="Contact Us (Call / WhatsApp)"
             style="width: 60px; height: 60px; background-color: #ff4757; color: white; border-radius: 50%; border: none; 
                    display: flex; align-items: center; justify-content: center; font-size: 26px; 
                    cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
-      <i class="fas fa-plus"></i>
+      <i class="fas fa-comments"></i>
     </button>
 
   </div>
@@ -1185,13 +1188,19 @@
     function toggleFAB() {
       let whatsapp = document.getElementById("whatsapp-btn");
       let call = document.getElementById("call-btn");
+      let mainBtn = document.getElementById("main-btn").querySelector("i");
+
       // Toggle display
       if (whatsapp.style.display === "none") {
         whatsapp.style.display = "flex";
         call.style.display = "flex";
+        mainBtn.classList.remove("fa-comments");
+        mainBtn.classList.add("fa-times"); // Change to "X" when open
       } else {
         whatsapp.style.display = "none";
         call.style.display = "none";
+        mainBtn.classList.remove("fa-times");
+        mainBtn.classList.add("fa-comments"); // Back to chat icon
       }
     }
   </script>
