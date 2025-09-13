@@ -30607,6 +30607,62 @@ ul.list-text.type-number {
 
 
 
+<!-- whatsapp testing - Floating Button Wrapper (bottom-right corner) -->
+<div id="fab-wrapper" 
+     style="position: fixed; bottom: 30px; right: 20px; 
+            display: flex; flex-direction: column; align-items: center; z-index: 9999;">
+  
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919990075542?text=Hello,+I+visited+your+website+and+want+to+know+more+about+your+products" 
+     target="_blank" id="whatsapp-btn"
+     title="Chat on WhatsApp"
+     style="width: 50px; height: 50px; margin-bottom: 10px; background-color: #25D366; color: white; border-radius: 50%; 
+            display: none; align-items: center; justify-content: center; text-decoration: none; 
+            font-size: 22px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Call Button -->
+  <a href="tel:+919990075542" id="call-btn"
+     title="Call Us"
+     style="width: 50px; height: 50px; margin-bottom: 10px; background-color: #34b7f1; color: white; border-radius: 50%; 
+            display: none; align-items: center; justify-content: center; text-decoration: none; 
+            font-size: 22px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <i class="fas fa-phone"></i>
+  </a>
+
+  <!-- Main Floating Button -->
+  <button onclick="toggleFAB()" id="main-btn"
+          title="Contact Us (Call / WhatsApp)"
+          style="width: 60px; height: 60px; background-color: #25D366; color: white; border-radius: 50%; border: none; 
+                 display: flex; align-items: center; justify-content: center; font-size: 26px; 
+                 cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    <i class="fab fa-whatsapp"></i>
+  </button>
+
+</div>
+
+<script>
+  function toggleFAB() {
+    let whatsapp = document.getElementById("whatsapp-btn");
+    let call = document.getElementById("call-btn");
+    let mainBtn = document.getElementById("main-btn").querySelector("i");
+
+    if (whatsapp.style.display === "none") {
+      whatsapp.style.display = "flex";
+      call.style.display = "flex";
+      mainBtn.classList.remove("fa-comments");
+      mainBtn.classList.add("fa-times");
+    } else {
+      w/workspaces/sofaainBtn.classList.remove("fa-times");
+      mainBtn.classList.add("fa-comments");
+    }
+  }
+</script>
+
+
+
+
 
 
 
