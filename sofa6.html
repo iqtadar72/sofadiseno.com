@@ -29508,7 +29508,7 @@ ul.list-text.type-number {
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKNSURBVHgB7drdbdRAFAXgs4h3QgW4A6ACTAXQAUsFhArWW0FIBYQKlg7iVBCoIKYC0sFwRztIqyh/9py5sifnkyznIblyzl7PeDwLiIiIiIiIiIiIiIiIiIiIiMgcrTBSCKGxUzviT7Barc4carV2eofHG6zWD8xV/IfCSE61NmGcczh6hqergSOXoK17jkBitV5hgbw6+gV4XoKjgSOvoN+A5zVIPO8Or6Bb8DA/tBZOltjRc611L7egiRNiS6z1EU68go7BfAAPq1bjNU57PkevwbMGzxoOPINuZzp8HMOB98rwC3hYtY7sQ2MOa7fyDvqY2YlL6mrvoGMwtE4k1opD0ScUNCXoX3YMmK5UJzbI0zHfyVDEC7JjF6Y7saPJrPHfLtX7G/KdoJDRL/4P2YVt7NShLu9tQ6AHWVbQUYVhD3a8tbCvQZQ9GdoFbVFX0I0dO5BRnjoqDLstOV5nS5NSTTqQZI/RN4X9pmeLemztju2QqUTQ8Vn0Es5bRYVlh01fGabZ+jPqsskdRooswdNz6DfkG7DfBfkKjnhNZ5gmhj2/CTLsV49XIc/moN55yPP9oNZVmO4yTFiqF3uplIYQVidGW+QZDn7OudviHTZ6J77o2zsL+6edehCk4agHR/zOHXXl9xCP16S5nUivle42xhzyaMWDTp1I6R5mLXMKx672evHP7B5KrdTVPZx4Bc38HjKz1imcuARt3TNgvzPDqtWDI16Ty/DhuWfYg4f1oV2zaj3EM+jf4LkATw8HT7qjE2YD3Mkt6DS2Mmuxxtbqho5oAA8r6Oomw4j5Tw0gYG/C3mXJQS/Kc/iKi41+xO9fONXqMM4fiIiIiIiIiIiIiIiIiIiIiEgV/gEsZ61lrLOXxQAAAABJRU5ErkJggg==">
     <link rel="apple-touch-icon-precomposed" href="https://gearo-html.vercel.app/images/logo/favicon.png">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="preload-wrapper">
@@ -30607,7 +30607,362 @@ ul.list-text.type-number {
 
 
 
- * Licensed under the Apache License, Version 2.0 (the 'License');
+<!-- whatsapp testing - Floating Button Wrapper (bottom-right corner) -->
+<div id="fab-wrapper" 
+     style="position: fixed; bottom: 30px; right: 20px; 
+            display: flex; flex-direction: column; align-items: center; z-index: 9999;">
+  
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919990075542?text=Hello,+I+visited+your+website+and+want+to+know+more+about+your+products" 
+     target="_blank" id="whatsapp-btn"
+     title="Chat on WhatsApp"
+     style="width: 50px; height: 50px; margin-bottom: 10px; background-color: #25D366; color: white; border-radius: 50%; 
+            display: none; align-items: center; justify-content: center; text-decoration: none; 
+            font-size: 22px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Call Button -->
+  <a href="tel:+919990075542" id="call-btn"
+     title="Call Us"
+     style="width: 50px; height: 50px; margin-bottom: 10px; background-color: #34b7f1; color: white; border-radius: 50%; 
+            display: none; align-items: center; justify-content: center; text-decoration: none; 
+            font-size: 22px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <i class="fas fa-phone"></i>
+  </a>
+
+  <!-- Main Floating Button -->
+  <button onclick="toggleFAB()" id="main-btn"
+          title="Contact Us (Call / WhatsApp)"
+          style="width: 60px; height: 60px; background-color: #25D366; color: white; border-radius: 50%; border: none; 
+                 display: flex; align-items: center; justify-content: center; font-size: 26px; 
+                 cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    <i class="fab fa-whatsapp"></i>
+  </button>
+
+</div>
+
+<script>
+  function toggleFAB() {
+    let whatsapp = document.getElementById("whatsapp-btn");
+    let call = document.getElementById("call-btn");
+    let mainBtn = document.getElementById("main-btn").querySelector("i");
+
+    if (whatsapp.style.display === "none") {
+      whatsapp.style.display = "flex";
+      call.style.display = "flex";
+      mainBtn.classList.remove("fa-comments");
+      mainBtn.classList.add("fa-times");
+    } else {
+      whatsapp.style.display = "none";
+      call.style.display = "none";
+      mainBtn.classList.remove("fa-times");
+      mainBtn.classList.add("fa-comments");
+    }
+  }
+</script>
+
+
+
+
+
+
+        <!-- .footer -->
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer-body">
+                            <div class="footer-left">
+                                <div class="footer-infor flex-grow-1">
+                                    <div class="footer-menu">
+                                        <div class="footer-col-block">
+                                            <h5 class="footer-heading text_white footer-heading-mobile">
+                                                Important Pages
+                                            </h5>
+                                            <div class="tf-collapse-content">
+                                                <ul class="footer-menu-list">
+                                                   
+                                                   
+                                                  
+                                                  
+                                                    <li class="text-body-default">
+                                                        <a href="homedecor.html" class="link footer-menu_item">Furniture</a>
+                                                    </li>
+                                                   
+                                                    <li class="text-body-default">
+                                                        <a href="sofa.html" class="link footer-menu_item">Sofa</a>
+                                                    </li>
+                                                    <li class="text-body-default">
+                                                        <a href="Recliner.html" class="link footer-menu_item">Recliners</a>
+                                                    </li>
+                                                     <li class="text-body-default">
+                                                        <a href="bed.html" class="link footer-menu_item">Beds</a>
+                                                    </li>
+                                                  
+                                                    
+                                                       <li class="text-body-default">
+                                                        <a href="homedecor.html" class="link footer-menu_item">Home Decor</a>
+                                                    </li>
+                                                  
+                                                    
+                                                    <li class="text-body-default">
+                                                        <a href="officeaccessories.html" class="link footer-menu_item">Office Accessories</a>
+                                                    </li>
+                                                  
+                                                </ul>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            </div>
+                                        </div>
+                                        <div class="footer-col-block">
+                                            <h5 class="footer-heading text_white footer-heading-mobile">
+                                                Customer Services
+                                            </h5>
+                                            <div class="tf-collapse-content">
+                                                <ul class="footer-menu-list">
+                                                   
+
+
+                                                    <li class="text-body-default">
+                                                        <a href="about.html" class="link footer-menu_item">About Us</a>
+                                                    </li>
+                                                   
+                                                    <li class="text-body-default">
+                                                        <a href="contact.html" class="link footer-menu_item">Shipping</a>
+                                                    </li>
+                                                   
+                                                   
+                                                    
+                                                    
+                                                    <li class="text-body-default">
+                                                        <a href="privacypolicy.html" class="link footer-menu_item">Privacy Policy</a>
+                                                    </li>
+                                                    <li class="text-body-default">
+                                                        <a href="term-of-use.html" class="link footer-menu_item">Terms &amp; Conditions</a>
+                                                    </li>
+                                                
+                                                
+                                                
+
+                                                    
+                                                  
+                                                    <li class="text-body-default">
+                                                        <a href="contact.html" class="link footer-menu_item">Contact us</a>
+                                                   
+                                                    </li>
+                                                
+                                                
+                                                
+                                                
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    <div class="footer-phone-number">
+                                        <h4 class="text_white number">+91-9990075542</h4>
+                                        <h4 class="text_white mail">thesofadiseno@gmail.com</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-col-block footer-newsletter">
+                                <h3 class="footer-heading footer-heading-mobile text_white">
+                                    For Any Equiry Email Us
+                                </h3>
+                                <div class="tf-collapse-content">
+                                    <form id="subscribe-form" action="#" class="form-newsletter subscribe-form" method="post" accept-charset="utf-8" data-mailchimp="true">
+                                        <div id="subscribe-content" class="subscribe-content">
+                                            <fieldset class="email">
+                                                <input id="subscribe-email" type="email" name="email-form" class="subscribe-email" placeholder="Enter your e-mail" tabindex="0" aria-required="true">
+                                            </fieldset>
+                                            <div class="button-submit">
+                                                <button id="subscribe-button" class="subscribe-button text-body-default " type="button">Subscribe<i class="icon-arrow-up-right"></i></button>
+                                            </div>
+                                        </div>
+                                        <div id="subscribe-msg" class="subscribe-msg"></div>
+                                    </form>
+                                    <ul class="tf-social-icon type-2">
+                                        <li><a href="https://www.facebook.com/share/16cdNHECQ5/" class="social-facebook"><i class="icon icon-facebook"></i></a></li>
+                                      
+                                        <li><a href="https://www.instagram.com/sofa_diseno?igsh=Z3FtZGY2eHB1c2o4" class="social-instagram"><i class="icon icon-instagram"></i></a></li>
+                                        <li>
+  <a href=" https://youtube.com/@sofadiseno?si=Wf1FFZ3KwtduNsnd" target="_blank" class="social-youtube">
+    <i class="fab fa-youtube"></i>
+  </a>
+</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="footer-bottom-wrap">
+                                <div class="center">
+                                    <div class="tf-currencies">
+                                        <select class="image-select center style-default style-box  type-currencies">
+                                            <option selected data-thumbnail="images/country/in.svg">English (IND)
+                                            </option>
+                                           
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="tf-payment">
+                                    <ul>
+                                        <li>
+                                            <img src="images/payment/payment-1.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="images/payment/payment-2.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="images/payment/payment-3.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="images/payment/payment-4.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="images/payment/payment-5.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="images/payment/payment-6.png" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- /.footer -->
+
+       
+
+
+
+
+
+
+    </div>
+    <!-- /wrapper -->
+
+    <!-- mobile menu -->
+    <!-- mobile menu -->
+<div class="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
+    <span class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></span>
+    <div class="mb-canvas-content">
+        <div class="mb-body">
+            <ul class="nav-ul-mb" id="wrapper-menu-navigation">
+                <li class="nav-mb-item active">
+                    <a href="https://www.sofadiseno.com/" class="mb-menu-link"><span>Home</span></a>
+                </li>
+                <li class="nav-mb-item">
+                    <a href="sofa.html" class="mb-menu-link"><span>Sofa</span></a>
+                </li>
+                <li class="nav-mb-item">
+                    <a href="Recliner.html" class="mb-menu-link"><span>Recliners</span></a>
+                </li>
+                <li class="nav-mb-item">
+                    <a href="bed.html" class="mb-menu-link"><span>Bed</span></a>
+                </li>
+                <li class="nav-mb-item">
+                    <a href="homedecor.html" class="mb-menu-link"><span>Home Decor</span></a>
+                </li>
+                <li class="nav-mb-item">
+                    <a href="officeaccessories.html" class="mb-menu-link"><span>Office Accessories</span></a>
+                </li>
+                <li class="nav-mb-item">
+                    <a href="#dropdown-menu-four" class="collapsed mb-menu-link" data-bs-toggle="collapse">
+                        <span>Blog</span>
+                        <span class="btn-open-sub"></span>
+                    </a>
+                    <div id="dropdown-menu-four" class="collapse">
+                        <ul class="sub-nav-menu">
+                            <li><a href="blog-list.html" class="sub-nav-link">Blog List</a></li>
+                            <li><a href="blog-grid.html" class="sub-nav-link">Blog Grid</a></li>
+                            <li><a href="blog-details.html" class="sub-nav-link">Blog Detail</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-mb-item">
+                    <a href="#dropdown-menu-five" class="collapsed mb-menu-link" data-bs-toggle="collapse">
+                        <span>Page</span>
+                        <span class="btn-open-sub"></span>
+                    </a>
+                    <div id="dropdown-menu-five" class="collapse">
+                        <ul class="sub-nav-menu">
+                            <li><a href="about.html" class="sub-nav-link">About Us</a></li>
+                            <li><a href="faqs.html" class="sub-nav-link">Faqs</a></li>
+                            <li><a href="store-list.html" class="sub-nav-link">Store List</a></li>
+                            <li><a href="term-of-use.html" class="sub-nav-link">Term Of Use</a></li>
+                            <li><a href="contact.html" class="sub-nav-link">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="mb-other-content">
+                <!-- Social Media Icons -->
+                <div class="group-icon" style="display:flex; gap:20px;">
+                    <a href="https://www.instagram.com/sofa_diseno?igsh=Z3FtZGY2eHB1c2o4" target="_blank" class="site-nav-icon">
+                        <i class="fab fa-instagram" style="font-size:20px;"></i> Instagram
+                    </a>
+                    <a href=" https://www.facebook.com/share/1HyEe8Ryyt/" target="_blank" class="site-nav-icon">
+                        <i class="fab fa-facebook" style="font-size:20px;"></i> Facebook
+                    </a>
+                    <a href=" https://youtube.com/@sofadiseno?si=Wf1FFZ3KwtduNsnd" target="_blank" class="site-nav-icon">
+                        <i class="fab fa-youtube" style="font-size:20px;"></i> YouTube
+                    </a>
+                </div>
+
+                <!-- Need Help Section -->
+                <div class="mb-notice">
+                    <a href="contact.html" class="text-need">Need help ?</a>
+                </div>
+
+                <!-- Address Section -->
+                <ul class="mb-info">
+                    <li>Address: E-49 Okhla Vihar , Jamia Nagar, <br> New Delhi,110025 </li>
+                    <li>Email: <b>thesofadiseno@gmail.com</b></li>
+                    <li>Phone: <b>(+91)-9990075542</b></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Section (Flag and Language) -->
+        <div class="mb-bottom">
+            <div class="bottom-bar-language">
+                <div class="tf-currencies">
+                    <select class="image-select center style-default type-currencies">
+                        <option selected data-thumbnail="images/country/in.svg">IND</option>
+                    </select>
+                </div>
+        </div>
+    </div>
+</div>
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    <!-- /mobile menu -->
 
     <!-- Categories -->
     <div class="offcanvas offcanvas-start canvas-filter canvas-categories" id="shopCategories">
