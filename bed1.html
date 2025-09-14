@@ -30516,6 +30516,13 @@ ul.list-text.type-number {
 
 
 
+
+
+        
+
+
+
+
 <!-- whatsapp testing - Floating Button Wrapper (bottom-right corner) -->
 <div id="fab-wrapper" 
      style="position: fixed; bottom: 30px; right: 20px; 
@@ -30555,24 +30562,21 @@ ul.list-text.type-number {
   function toggleFAB() {
     let whatsapp = document.getElementById("whatsapp-btn");
     let call = document.getElementById("call-btn");
-    let mainBtnIcon = document.getElementById("main-btn").querySelector("i");
+    let mainBtn = document.getElementById("main-btn").querySelector("i");
 
-    if (whatsapp.style.display === "none" || whatsapp.style.display === "") {
-      // Show Buttons
+    if (whatsapp.style.display === "none") {
       whatsapp.style.display = "flex";
       call.style.display = "flex";
-      mainBtnIcon.classList.remove("fab", "fa-whatsapp");
-      mainBtnIcon.classList.add("fas", "fa-times");
+      mainBtn.classList.remove("fa-comments");
+      mainBtn.classList.add("fa-times");
     } else {
-      // Hide Buttons
       whatsapp.style.display = "none";
       call.style.display = "none";
-      mainBtnIcon.classList.remove("fas", "fa-times");
-      mainBtnIcon.classList.add("fab", "fa-whatsapp");
+      mainBtn.classList.remove("fa-times");
+      mainBtn.classList.add("fa-comments");
     }
   }
 </script>
-
 
 
 
